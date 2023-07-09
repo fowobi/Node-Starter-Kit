@@ -18,9 +18,11 @@ app.get("/", function(request,response){
     console.log("hello world,you've reached my API")
     response.send("Hello world,you're getting a response from my server")
 });
+  //http://localhost:9090/trainees
+  //http://localhost:9090/trainees?region=north-west
 
 app.get("/trainees", function(request,response){
-    console.log(request.query,region, "<--- request.query");
+    console.log(request.query.region, "<---- request.query.region");
   console.log("Received a request to the /trainees endpoint");
   response.send({trainees});
 });
